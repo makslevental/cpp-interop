@@ -11,3 +11,4 @@ set(CMAKE_CXX_STANDARD
 
 add_subdirectory(interp)
 add_subdirectory(other)
+add_subdirectory(p3-ex4)
