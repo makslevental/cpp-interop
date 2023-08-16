@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 3.22)
 project(interop)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -9,6 +9,6 @@ set(CMAKE_CXX_STANDARD
         17
         CACHE STRING "C++ standard to conform to")
 
-add_subdirectory(interp)
+add_subdirectory(working_demo)
 add_subdirectory(other)
-add_subdirectory(p3-ex4)
+#add_subdirectory(p3-ex4)
