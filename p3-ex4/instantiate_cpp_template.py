@@ -3,7 +3,7 @@
 import ctypes
 import os
 
-libpath = os.path.dirname(__file__) + "/../../build/lib/libp3-ex4-lib.so"
+libpath = os.path.dirname(__file__) + "/libp3-ex4-lib.dylib"
 
 libInterop = ctypes.CDLL(libpath, mode=ctypes.RTLD_GLOBAL)
 _cpp_compile = libInterop.Clang_Parse

@@ -131,10 +131,9 @@ void *Clang_CreateObject(Decl_t RecordDecl) {
     ss << "auto _v" << counter++ << " = "
        << "new ((void*)" << loc << ")" << Name << "();";
 
-    auto R = ExampleLibrary::GetInterpreter()->ParseAndExecute(ss.str());
-    if (!R) {
-        std::cerr << "couldn't create object for " << ss.str() << "\n";
-        return nullptr;
+    if (auto Err = ExampleLibrary::GetInterpreter()->ParseAndExecute(ss.str())) {
+      std::cerr << "couldn't create object for " << ss.str() << "\n";
+      return nullptr;
     }
 
     return loc;
